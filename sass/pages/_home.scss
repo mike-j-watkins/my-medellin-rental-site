@@ -1,0 +1,330 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+      rgba(49, 57, 61, 0.8),
+      rgba(41, 46, 73, 0.8)
+    ),
+    url(../img/descarga1.png);
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  background-color: $color-grey-light-1;
+  color: $color-main;
+  padding: 10rem 25rem;
+  position: relative;
+  z-index: 4;
+
+  @include respond(desktop) {
+    padding: 10rem 15rem;
+  }
+  @include respond(tab-land-13k) {
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 8rem;
+  }
+  @include respond(phone) {
+    padding: 4rem 4rem 6rem;
+  }
+
+  &__text {
+    flex: 0 0 66%;
+    padding: 0 14rem;
+
+    @include respond(tab-land) {
+      padding: 0 6rem;
+    }
+    @include respond(tab-port) {
+      padding: 4rem;
+    }
+
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
+
+  &__testimonial {
+    position: relative;
+    flex: 0 0 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 0 5rem;
+
+    &-testimonial {
+      background-color: $color-blue;
+      padding: 8rem;
+      border-radius: 30px;
+      color: white;
+    }
+    & span {
+      // color: $color-green;
+    }
+    &-testimonial::before {
+      content: "\201C";
+      position: absolute;
+      top: 4rem;
+      left: 0.5rem;
+      line-height: 1;
+      font-size: 15rem;
+      color: $color-grey-light-2;
+      font-family: "Times New Roman", Times, serif;
+      z-index: 1;
+    }
+    &-testimonial::after {
+      content: "\201D";
+      position: absolute;
+      bottom: -1rem;
+      right: 5rem;
+      line-height: 1;
+      font-size: 15rem;
+      color: $color-grey-light-2;
+      font-family: "Times New Roman", Times, serif;
+      z-index: 1;
+
+      @include respond(phone) {
+        right: 2rem;
+        bottom: -1.5rem;
+      }
+    }
+  }
+}
+
+.section-apartments {
+  display: flex;
+  & > * {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.apartments {
+  padding: 10rem 5rem 10rem 35rem;
+  //   flex: 0 0 66%;
+  flex: 0 0 55%;
+  background-color: $color-blue;
+  color: white;
+  font-family: helveticaneue, sans-serif, helvetica, arial;
+
+  @include respond(desktop) {
+    padding: 10rem 5rem 10rem 20rem;
+  }
+  @include respond(tab-land) {
+    flex: 1;
+    padding: 10rem 22rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 12rem;
+  }
+  @include respond(phone) {
+    padding: 5rem 4rem;
+  }
+
+  & ul {
+    list-style: none;
+
+    & li {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  & ul li svg {
+    flex: 0 0 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    fill: $color-green;
+  }
+
+  & ul li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.img-half {
+  overflow-x: hidden;
+  //   flex: 0 0 33%;
+  flex: 0 0 45%;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(110, 204, 165, 0.9),
+      rgba(76, 163, 127, 0.8)
+    ),
+    url(../img/apt-4-terrace.jpg);
+  background-size: cover;
+
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+// url(../img/303c69d7-1e1b-48aa-a29b-ea9a7abb3d53.png);
+.testimonials {
+  background-color: $color-grey-light-2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 25rem 15rem;
+
+  @include respond(desktop) {
+    padding: 8rem 15rem;
+  }
+  @include respond(tab-port) {
+    padding: 8rem;
+  }
+  @include respond(phone) {
+    padding: 8rem 2rem;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   background-color: $color-grey-light-2;
+  padding: 10rem 20rem;
+
+  @include respond(desktop) {
+    padding: 10rem 12rem;
+  }
+  @include respond(tab-land-14k) {
+    padding: 10rem 8rem;
+  }
+  @include respond(phone) {
+    padding: 8rem 1rem;
+  }
+}
+
+.contact {
+  background-image: linear-gradient(45deg, $color-blue 66%, $color-green 34%);
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  color: white;
+  background-color: $color-grey-dark-2;
+  padding: 10rem 0 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__logo {
+    font-size: $default-font-size;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      padding: 1rem 2rem;
+      letter-spacing: 0.5rem;
+      font-weight: 400;
+
+      @include respond(phone) {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    &-text {
+      @include respond(phone) {
+        font-size: clamp(18px, 1.8rem, 25px);
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    padding: 8rem 0 4rem;
+    width: 100%;
+    max-width: 1700px;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & > * {
+      width: 35%;
+      display: flex;
+      border-top: 1px solid white;
+      padding-top: 1rem;
+
+      @include respond(tab-land-13k) {
+        width: 45%;
+      }
+
+      @include respond(tab-land) {
+        justify-content: center;
+      }
+
+      @include respond(phone) {
+        width: 90%;
+        text-align: center;
+      }
+    }
+
+    & ul {
+      & a {
+        text-decoration: none;
+        color: white;
+        font-size: $default-font-size;
+        // margin-bottom: 100rem;
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+      @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        // margin-left: -15rem;
+      }
+    }
+
+    &-links {
+      @include respond(tab-land) {
+        padding: 1rem 0;
+      }
+    }
+
+    &-legal {
+      justify-content: flex-start;
+      @include respond(tab-land) {
+        justify-content: center;
+      }
+
+      & p {
+        font-size: $default-font-size;
+      }
+    }
+  }
+}

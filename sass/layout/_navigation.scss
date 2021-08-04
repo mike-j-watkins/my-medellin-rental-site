@@ -1,0 +1,153 @@
+.active {
+  background-color: $color-blue;
+  z-index: 10;
+}
+
+.logo-small {
+  padding: 3rem 2rem;
+
+  font-size: 1.5rem;
+  font-weight: 200;
+  letter-spacing: 0.5rem;
+  position: relative;
+  white-space: nowrap;
+
+  &-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 275px;
+    border: 2px solid white;
+    padding: 0 1rem;
+  }
+  &__text {
+    font-size: 1.5rem;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 10;
+
+  @include respond(tab-land) {
+    position: fixed;
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    padding: 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    max-width: 1300px;
+    position: relative;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+      padding: 2rem;
+    }
+  }
+
+  &__logo {
+    flex: 2;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    position: relative;
+
+    &-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 300px;
+      border: 2px solid white;
+    }
+    &-text {
+      font-weight: 200;
+    }
+
+    @include respond(tab-land) {
+      min-width: 200px;
+
+      &-box {
+        padding: 0 1rem;
+      }
+
+      &-text {
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+
+  &__list {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+    }
+    & > * {
+      @include respond(tab-land) {
+        margin-top: 10px;
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-green;
+        }
+        width: 100%;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.7rem;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  &__button {
+    background-color: $color-blue;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+
+    @include respond(phone) {
+      padding: 1rem 1.4rem;
+      top: 2.3rem;
+    }
+
+    &-bars {
+      width: 20px;
+      height: 4px;
+      background-color: white;
+      margin: 6px 0;
+
+      @include respond(phone) {
+        width: 15px;
+        height: 2px;
+        margin: 4px 0;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

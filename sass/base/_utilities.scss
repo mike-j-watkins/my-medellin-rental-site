@@ -1,0 +1,36 @@
+.u-hr-small {
+  width: 60px;
+
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  border-radius: 30px;
+
+  &-green {
+    border: 1px solid $color-green;
+    background-color: $color-green;
+  }
+
+  &-blue {
+    border: 1px solid $color-blue;
+    background-color: $color-blue;
+  }
+}
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-bottom-large {
+  margin-bottom: 8rem !important;
+}
+
+.u-center {
+  text-align: center;
+}

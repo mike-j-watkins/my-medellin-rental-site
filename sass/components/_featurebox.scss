@@ -1,0 +1,45 @@
+.featurebox__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 0;
+
+  @include respond(tab-land-14k) {
+    flex-direction: column;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 8rem;
+    @include respond(desktop) {
+      margin-right: 4rem;
+    }
+    @include respond(tab-land-14k) {
+      margin-right: 0;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+.featurebox {
+  background: linear-gradient(
+    140deg,
+    $color-blue 90%,
+    rgba($color-green, 0.7) 90%
+  );
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  color: white;
+  border-radius: 8px;
+  padding: 2.5rem;
+  flex: 1;
+  position: relative;
+
+  &__main {
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    text-align: right;
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+  }
+}

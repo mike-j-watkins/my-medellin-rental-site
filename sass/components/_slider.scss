@@ -1,0 +1,75 @@
+.swiper {
+  &-container {
+    width: 100%;
+    height: 20vw;
+    padding-bottom: 50px;
+    @include respond(tab-land) {
+      height: 300px;
+    }
+    @include respond(tab-port) {
+      height: 50vh;
+      width: 50vh;
+    }
+  }
+
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    width: 90%;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  &-card {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+
+    @include respond(tab-port) {
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+    }
+
+    // @include respond(desktop) {
+    //   height: 90%;
+    // }
+
+    &-1 {
+      background-image: url(../img/apt-4-livingroom.jpg);
+    }
+    &-2 {
+      background-image: url(../img/8200cace-9de5-48a7-9cb4-e57307cc6372.png);
+    }
+    &-3 {
+      background-image: url(../img/29cda2c0-29b8-4180-9f88-4a098a0cf100.png);
+      background-position-x: -90px;
+    }
+    &-4 {
+      background-image: url(../img/fec5a243-3227-4298-9315-ee36b673ecf7.png);
+    }
+    &-5 {
+      background-image: url(../img/apt-4-terrace.jpg);
+    }
+    &-6 {
+      background-image: url(../img/oak-house.jpg);
+    }
+  }
+  &-layer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

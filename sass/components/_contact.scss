@@ -1,0 +1,54 @@
+.contact__container {
+  padding: 8rem 20rem;
+  display: flex;
+  justify-content: center;
+
+  @include respond(tab-port) {
+    padding: 5rem 0;
+  }
+}
+
+.contact__form {
+  padding: 5rem 7rem;
+  background-color: white;
+  border-radius: 20px;
+
+  @include respond(phone) {
+    padding: 5rem 3.5rem;
+  }
+}
+
+.form__contacts {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  &-item svg {
+    width: 5rem;
+    height: 5rem;
+    text-decoration: none;
+    margin-right: 15px;
+
+    @include respond(phone) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    font-size: $default-font-size;
+    text-decoration: none;
+    color: $color-main;
+    margin-top: 7rem;
+
+    @include respond(phone) {
+      margin-top: 4rem;
+    }
+
+    &:last-child {
+      margin-bottom: 7rem;
+    }
+  }
+}
